@@ -24,6 +24,7 @@ public class Main
         double price = 0;
         String sandwich = "";
         int i = 0;
+        double totalPrice = 0;
 
         String data[] = new String[6];
 
@@ -53,6 +54,7 @@ public class Main
                     System.out.println("How many sandwiches would you like?\n" + "Enter Quantity: ");
                     int x = quantity.nextInt();
                     price = x*5.50;
+                    totalPrice += price;
                     sandwich = "Ham";
                     data[i] = x + " " + sandwich + " Sandwich Price Total*quantity: " + "$" + price;
                     i++;
@@ -63,6 +65,7 @@ public class Main
                     System.out.println("How many sandwiches would you like?\n" + "Enter Quantity: ");
                     x = quantity.nextInt();
                     price = x*6.00;
+                    totalPrice += price;
                     sandwich = "Roast Beef";
                     data[i] = x + " " + sandwich + " Sandwich Price Total*quantity: " + "$" + price;
                     i++;
@@ -73,6 +76,7 @@ public class Main
                     System.out.println("How many sandwiches would you like?\n" + "Enter Quantity: ");
                     x = quantity.nextInt();
                     price = x*5.25;
+                    totalPrice += price;
                     sandwich = "Salami";
                     data[i] = x + " " + sandwich + " Sandwich Price Total*quantity: " + "$" + price;
                     i++;
@@ -83,6 +87,7 @@ public class Main
                     System.out.println("How many sandwiches would you like?\n" + "Enter Quantity: ");
                     x = quantity.nextInt();
                     price = x*5.00;
+                    totalPrice += price;
                     sandwich = "Tuna";
                     data[i] = x + " " + sandwich + " Sandwich Price Total*quantity: " + "$" + price;
                     i++;
@@ -91,10 +96,12 @@ public class Main
                 //Done Ordering
                 case 'D':
                     price += 0;
+                    totalPrice += price;
                     break;
 
                 default:
                     price += 0;
+                    totalPrice += price;
                     System.out.println("Option " + option + " is invalid.");
 
             }
@@ -114,6 +121,7 @@ public class Main
         {
             System.out.println(data[counter] + "0");
         }
+        System.out.println("The total price is: " + totalPrice);
     }
 
 }
